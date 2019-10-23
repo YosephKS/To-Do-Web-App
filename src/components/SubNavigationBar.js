@@ -1,14 +1,15 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import '../static/css/SubNavigationBar.css';
 
 class SubNavigationBar extends React.Component {
     render() {
     return (
-        <Navbar bg="dark" sticky = "top" style = {{height: "45px"}}>
+        <Navbar bg="dark" sticky = "top" className = "subnavbar-body">
             <Nav className="mr-auto">
-                <Nav.Link href="#home" style = {{color: "white", marginRight: "15px"}}>Home</Nav.Link>
-                <Nav.Link href="#features" style = {{color: "white", borderBottom: "5px solid white"}}><b>Dashboard</b></Nav.Link>
+                <Nav.Link href="#home" className = "subnav-home" style = {{color: "white"}}>Home</Nav.Link>
+                <Nav.Link href="#dashboard" className = "subnav-dashboard" style = {{color: "white"}}><b>Dashboard</b></Nav.Link>
             </Nav>
         </Navbar>
 )}}
