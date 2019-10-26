@@ -30,10 +30,10 @@ class Home extends React.Component {
               </Col>
             </Row>
             <Row>
-              <Col className = "google-map" lg = {5} md = {11} sm = {10} xs = {10} style = {{height: '350px', margin: '20px 20px 20px 20px'}}>
+              <Col className = "google-map" lg = {5} md = {11} sm = {10} xs = {10}>
                 <Maps />
               </Col>
-              <Col className = "form" lg = {6} md = {12} style = {{margin: '20px 20px 20px 20px'}}>
+              <Col className = "form" lg = {6} md = {12}>
                 <Forms/>
               </Col>
             </Row>

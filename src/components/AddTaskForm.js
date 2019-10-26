@@ -13,7 +13,8 @@ class AddTaskForm extends React.Component {
         super(props);
         this.state = {
             TaskInput: "",
-            TaskList: []
+            TaskList: [],
+            TaskJSON: {}
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -21,21 +22,29 @@ class AddTaskForm extends React.Component {
     }
 
     handleChange(event) {
-        this.setState({ name: event.target.value });
+        this.setState({ TaskInput: event.target.value });
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        /*
-        const updatedTaskList = ;
 
-        this.setState({TaskList: })
+        // Clear the data after clicking the submit button
+        this.setState({TaskInput: ''});
 
-        axios.post(``, { user })
+        // Number of Task (in JSON Object)
+        const countTask = Object.keys(this.state.TaskJSON).length;
+
+        // Add the Inputed Task into the JSON and Array data
+        this.state.TaskJSON["task " + (countTask + 1)] = this.state.TaskInput;
+        this.state.TaskList.push(this.state.TaskInput);
+
+        console.log("Successfully Submitted");
+
+        axios.post(`http://localhost:5000/updateTable/User`, {tasks: this.state.TaskJSON})
         .then(res => {
             console.log(res);
             console.log(res.data);
-        })*/
+        })
     }
 
     componentDidMount() {
@@ -46,12 +55,13 @@ class AddTaskForm extends React.Component {
             console.log("Successfully Fetch");
 
             const tasks = [];
+            const tasksJSON = JSON.parse(output.tasks)
 
-            for (const task in JSON.parse(output.tasks)) {
-                tasks.push(JSON.parse(output.tasks)[task]);
+            for (const task in tasksJSON) {
+                tasks.push(tasksJSON[task]);
             }
 
-            this.setState({TaskList: tasks});
+            this.setState({TaskList: tasks, TaskJSON: tasksJSON});
 
         })
 
@@ -67,10 +77,10 @@ class AddTaskForm extends React.Component {
                 <Container className = "add-task-content">
                     <Row className = "add-task-row">
                     <Col md = {11} sm = {10} xs = {9} className = "add-task-col-1">
-                        <Form.Control placeholder="Add Task" onChange = {this.handleChange} style = {{border: "1.3px solid grey"}} value = {this.state.TaskInput}/>
+                        <Form.Control placeholder="Add Task" value = {this.state.TaskInput} onChange = {this.handleChange} style = {{border: "1.3px solid grey"}}/>
                     </Col>
                     <Col md = {1} sm = {2} xs = {3} className = "add-task-col-2">
-                        <img src = {addButton} className = "add-button" width = "35px" height = "35px" alt = "Add Button"/>
+                        <img src = {addButton} onClick = {this.handleSubmit} className = "add-button" width = "35px" height = "35px" alt = "Add Button"/>
                     </Col>
                     </Row>
                 </Container>

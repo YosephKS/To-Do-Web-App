@@ -35,3 +35,11 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.add-button:hover {
+    cursor: pointer;
+}
+
+.to-do-container {
+    margin-bottom: 50px;
+}

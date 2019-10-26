@@ -1,5 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({extended: true});
 const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
@@ -17,6 +19,7 @@ const connection = mysql.createConnection({
   });
 
 app.use(cors())
+app.use(express.json());
 
 // GET REST API
 
@@ -40,16 +43,18 @@ app.get('/readTable/:tableName', (req, res) => {
       });
 });
 
-/*
+
 // 3. Update the Fields in Tables
-app.get('/updateTable/:tableName', (req, res) => {
+app.post('/updateTable/:tableName', urlencodedParser, (req, res) => {
     const tableName = req.params.tableName;
-    connection.query("SELECT * FROM " + tableName, function (err, result) {
-        if (err) throw err;
-        return res.send(result);
-      });
+    tasks = req.body.tasks; 
+    console.log(JSON.stringify(tasks));
+
+    const sql = "UPDATE " + tableName + " SET tasks = ('" + JSON.stringify(tasks) + "')";
+
+    // Update the MySQL Query
+    connection.query(sql);
 });
-*/
 
 app.listen(port, () => {
     console.log('Server is running on port: ' + port);
