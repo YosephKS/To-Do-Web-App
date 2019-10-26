@@ -2,14 +2,19 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import '../static/css/SubNavigationBar.css';
+import {NavLink} from 'react-router-dom';
 
 class SubNavigationBar extends React.Component {
     render() {
     return (
         <Navbar bg="dark" sticky = "top" className = "subnavbar-body">
             <Nav className="mr-auto">
-                <Nav.Link href="#home" className = "subnav-home" style = {{color: "white"}}>Home</Nav.Link>
-                <Nav.Link href="#dashboard" className = "subnav-dashboard" style = {{color: "white"}}><b>Dashboard</b></Nav.Link>
+                <NavLink exact activeClassName="active" to="/" className = "subnav-home" style = {{color: "white"}}>
+                    Home
+                </NavLink>
+                <NavLink exact activeClassName="active" to="/dashboard/User" className = "subnav-dashboard" style = {{color: "white"}}>
+                    Dashboard
+                </NavLink>
             </Nav>
         </Navbar>
 )}}

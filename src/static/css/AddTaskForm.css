@@ -1,0 +1,37 @@
+.add-button {
+    filter: invert(50%) sepia(20%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.add-task-container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.add-task-content,
+.to-do-content {
+    padding: 0;  
+    background-color: #F6F6F6; 
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.add-task-content {
+    margin-top: 75px; 
+    margin-bottom: 75px;
+}
+
+.add-task-row,
+.to-do-row {
+    padding: 0;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.add-task-col-1,
+.add-task-col-2,
+.to-do-col {
+    display: flex; 
+    justify-content: center; 
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import NavigationBar from './components/NavigationBar';
 import AddTaskForm from './components/AddTaskForm';
 import SubNavigationBar from './components/SubNavigationBar';
+import './static/css/App.css';
 
 
 class App extends React.Component {
@@ -12,9 +13,9 @@ class App extends React.Component {
           
           <NavigationBar />
 
-          <SubNavigationBar />
+          <SubNavigationBar dashboardPage = "active"/>
 
-          <h1>{params.username}'s To-Do List</h1>
+          <h1 className = "user-title">{params.username}'s To-Do List</h1>
 
           <AddTaskForm />
 

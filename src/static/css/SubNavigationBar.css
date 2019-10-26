@@ -2,11 +2,18 @@
     height: 45px;
 }
 
-.subnav-home {
-    margin-right: 15px;
+.subnav-home,
+.subnav-dashboard {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
 }
 
-.subnav-dashboard {
+.active {
     border-bottom: 5px solid white;
+    font-weight: bold;
 }
 
