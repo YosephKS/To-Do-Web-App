@@ -25,6 +25,8 @@ Before running the Web App on localhost, it is imporant to look for several depe
     mysql  Ver 8.0.17 for osx10.13 on x86_64 (Homebrew)
 ```
 
+Furthermore, it is **essential to have VPN set up** to run this Application because it uses Google Map API, which might disrupt its implementation if Chinese Network is used.
+
 # Executing Procedure
 
 After cloning the (master) repository, the following will be the procedure to run the Web Application.
