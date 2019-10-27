@@ -1,4 +1,5 @@
 # To-Do-Web-App
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 A simple To-Do Web Application to manage daily activities. The Application was build using React.js for its Frontend Framework, Express.js for its Backend Framework, and MySQL for its Database. The following will provide basic informations on how to execute the Web Application onto the localhost.
 
