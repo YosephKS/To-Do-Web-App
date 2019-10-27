@@ -18,7 +18,7 @@ Before running the Web App on localhost, it is imporant to look for several depe
     v10.15.3
 ```
 
-3. mysql
+3. MySQL
 ```sh
     $ mysql --version
     mysql  Ver 8.0.17 for osx10.13 on x86_64 (Homebrew)
@@ -27,3 +27,14 @@ Before running the Web App on localhost, it is imporant to look for several depe
 # Executing Procedure
 
 After cloning the (master) repository, the following will be the procedure to run the Web Application.
+
+1. Create MySQL Database within the Local Computer
+```sh
+    $ cd backend && node database.js
+```
+
+
+2. Run the Server (both React.js and Express.js)
+```sh
+    $ npm run dev
+```
