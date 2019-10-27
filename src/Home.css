@@ -1,0 +1,17 @@
+.col-contact {
+    display: flex; 
+    justify-content: center;
+    text-align: center;
+}
+
+.section-contact {
+    padding-bottom: 50px;
+}
+
+.title-contact {
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+}

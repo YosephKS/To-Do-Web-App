@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavigationBar from './components/NavigationBar';
+import AddTaskForm from './components/AddTaskForm';
+import SubNavigationBar from './components/SubNavigationBar';
+import './static/css/App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+class App extends React.Component {
+  render() {
+    const {params} = this.props.match
+    return (
+      <div>
+          
+          <NavigationBar />
+
+          <SubNavigationBar dashboardPage = "active"/>
+
+          <h1 className = "user-title">{params.username}'s To-Do List</h1>
+
+          <AddTaskForm />
+
+      </div>
+);}}
 
 export default App;
