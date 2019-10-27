@@ -1,0 +1,29 @@
+.header-title-col,
+.header-subtitle-col,
+.header-button-col {
+    display: flex; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.header-title-col {
+    margin-top: 150px;
+}
+
+.header-subtitle-col {
+    margin-top: 0px;
+}
+
+.header-button-col {
+    margin-top: 50px; 
+    margin-bottom: 200px;
+}
+
+.dashboard-button {
+    width: 300px;
+}
+
+.header-title {
+    font-size: 75px; 
+    line-height: normal;
+}

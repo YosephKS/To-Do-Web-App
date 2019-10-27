@@ -36,10 +36,26 @@
     padding-bottom: 15px;
 }
 
+.to-do-button-col {
+   display: flex; 
+    justify-content: center; 
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+
 .add-button:hover {
+    cursor: pointer;
+}
+
+.delete-button:hover {
     cursor: pointer;
 }
 
 .to-do-container {
     margin-bottom: 50px;
+}
+
+.add-task-input {
+    border: 1.3px solid grey;
 }

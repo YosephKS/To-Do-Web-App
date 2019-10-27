@@ -15,7 +15,7 @@ class NavigationBar extends React.Component {
             height="30"
             className="d-inline-block align-top"
         />
-        <b className = "app-title">{'TO-DO WEB APP'}</b>
+        <b className = "app-title">{'TO-DO'}</b>
         </Navbar.Brand>
     </Navbar>
 )}}
