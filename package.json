@@ -19,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node-env-run backend --exec nodemon",
-    "database": "cd backend && node database.js && cd ..",
+    "database": "cd backend && node database.js && node table.js && cd ..",
     "dev": "run-p server start"
   },
   "eslintConfig": {

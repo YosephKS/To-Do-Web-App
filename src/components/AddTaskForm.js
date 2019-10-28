@@ -56,7 +56,7 @@ class AddTaskForm extends React.Component {
             console.log(res.data);
         })
         .catch(error => {
-            console.log("ERROR 404!");
+            console.log("ADD ERROR 404!");
         })
     }
 
@@ -68,12 +68,14 @@ class AddTaskForm extends React.Component {
         const taskJSON = this.state.TaskJSON;
         const taskList = this.state.TaskList;
 
+        // Delete Elements in JSON Object and Array
         delete taskJSON["task " + (parseInt(key) + 1)];
         taskList.splice(key, 1);
         
         let count = 1;
         const newTaskJSON = {};
 
+        // Restructure (Remapping) the JSON Object
         for (const task in taskJSON) {
             newTaskJSON["task " + count] = taskJSON[task];
             count += 1;
@@ -86,6 +88,9 @@ class AddTaskForm extends React.Component {
             console.log(res);
             console.log(res.data);
         })
+        .catch(error => {
+            console.log("DELETE ERROR 404!");
+        }) 
 
     }
 
@@ -95,7 +100,6 @@ class AddTaskForm extends React.Component {
         axios.get(`http://localhost:5000/readTable/` + this.props.username)
         .then(res => {
             const output = res.data[0];
-            console.log(output);
             console.log("Successfully Fetch");
 
             const tasks = [];   // task in Array (for Map method)

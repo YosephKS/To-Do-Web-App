@@ -7,7 +7,7 @@ class NavigationBar extends React.Component {
   render() {
     return (
       <Navbar variant="dark" className = "navbar-body">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
         <img id = "logo-image"
             alt=""
             src={logo}

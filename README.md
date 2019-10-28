@@ -50,7 +50,7 @@ After cloning the (master) repository, the following will be the procedure to ru
       Enter password:
 ```
 
-2. Change the MySQL connection setup in *backend/index.js* and *backend/database.js*
+2. Change the password for the MySQL connection setup in both *backend/index.js* and *backend/database.js*
 ```sh
     const connection = mysql.createConnection({
         host: 'localhost',
@@ -60,7 +60,7 @@ After cloning the (master) repository, the following will be the procedure to ru
     });
 ```
 
-3. Open another Bash Terminal. Return to the root folder and create MySQL Database within the Local Computer
+3. Open another tab of Bash Terminal. Return to the root folder and create MySQL Database within the Local Computer
 ```sh
     $ npm run database
 ```
