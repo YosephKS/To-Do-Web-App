@@ -55,7 +55,7 @@ After cloning the (master) repository, the following will be the procedure to ru
     const connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '12345', // Change based on local MySQL
+        password: '12345', // Change based on MySQL
         database: 'todo'
     });
 ```
