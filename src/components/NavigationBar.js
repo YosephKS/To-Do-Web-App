@@ -7,7 +7,7 @@ class NavigationBar extends React.Component {
   render() {
     return (
       <Navbar variant="dark" className = "navbar-body">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
         <img id = "logo-image"
             alt=""
             src={logo}
@@ -15,7 +15,7 @@ class NavigationBar extends React.Component {
             height="30"
             className="d-inline-block align-top"
         />
-        <b className = "app-title">{'TO-DO WEB APP'}</b>
+        <b className = "app-title">{'TO-DO'}</b>
         </Navbar.Brand>
     </Navbar>
 )}}

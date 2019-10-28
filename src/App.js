@@ -17,7 +17,7 @@ class App extends React.Component {
 
           <h1 className = "user-title">{params.username}'s To-Do List</h1>
 
-          <AddTaskForm />
+          <AddTaskForm username = {params.username}/>
 
       </div>
 );}}
