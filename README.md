@@ -27,16 +27,16 @@ Before running the Web App on localhost, it is imporant to look for several pre-
     v10.15.3
 ```
 
-3. MySQL
+3. MySQL Shell
 ```sh
     $ mysql --version
     mysql  Ver 8.0.17 for osx10.13 on x86_64 (Homebrew)
 ```
 
 In case any of the of the pre-requisites are missing, it is suggested to install them before execution. Here are the documentation links for each dependencies: 
-1. NPM: 
-1. Node: 
-1. MySQL: 
+1. NPM: https://docs.npmjs.com/
+1. Node: https://nodejs.org/en/docs/
+1. MySQL Shell: https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install.html
 
 Furthermore, it is **essential to have VPN set up** to run this Application because it uses Google Map API, which might disrupt its implementation if Chinese Network is used.
 
@@ -44,13 +44,28 @@ Furthermore, it is **essential to have VPN set up** to run this Application beca
 
 After cloning the (master) repository, the following will be the procedure to run the Web Application.
 
-1. Create MySQL Database within the Local Computer
+1. Run the local MySQL server (password is required)
+```sh
+    $ mysql -u root -p
+```
+
+2. Change the MySQL connection setup in *backend/index.js* and *backend/database.js*
+```sh
+    const connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: '12345', // Change based on local MySQL
+        database: 'todo'
+    });
+```
+
+3. Create MySQL Database within the Local Computer
 ```sh
     $ npm run database
 ```
 
 
-2. Run the Server (both React.js and Express.js)
+4. Run the Server (both React.js and Express.js)
 ```sh
     $ npm run dev
 ```
