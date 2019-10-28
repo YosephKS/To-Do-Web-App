@@ -40,17 +40,14 @@ In case any of the of the pre-requisites are missing, it is suggested to install
 
 Furthermore, it is **essential to have VPN set up** to run this Application because it uses Google Map API, which might disrupt its implementation if Chinese Network is used.
 
-# MySQL Setup
-
-
-
 # Executing Procedure
 
 After cloning the (master) repository, the following will be the procedure to run the Web Application using Bash Terminal.
 
-1. Open Bash Terminal and run the local MySQL server (password is required)
+1. Open Bash Terminal and run the local MySQL server (password is required). If no password was set up after installation, just press *Enter* for the password.
 ```sh
     $ mysql -u root -p
+      password:
 ```
 
 2. Change the MySQL connection setup in *backend/index.js* and *backend/database.js*
