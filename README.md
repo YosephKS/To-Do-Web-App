@@ -47,7 +47,7 @@ After cloning the (master) repository, the following will be the procedure to ru
 1. Open Bash Terminal and run the local MySQL server (password is required). If no password was set up after installation, just press *Enter* for the password.
 ```sh
     $ mysql -u root -p
-      password:
+      Enter password:
 ```
 
 2. Change the MySQL connection setup in *backend/index.js* and *backend/database.js*
